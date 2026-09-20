@@ -238,6 +238,16 @@ body {
   .content {
     padding: 2.5rem 1.5rem 3rem;
     max-width: 100%;
+
+  .headshot {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+
+    
   }
 }
 
@@ -246,3 +256,5 @@ body {
     scroll-behavior: auto;
   }
 }
+
+
