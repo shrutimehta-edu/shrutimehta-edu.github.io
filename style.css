@@ -103,8 +103,8 @@ body {
 /* CHANGED: headshot style moved here from inside the mobile section,
    where a missing } stopped it working on desktop */
 .headshot {
-  width: 108px;
-  height: 108px;
+  width: 150px;    /* CHANGED: bigger photo (was 108px) */
+  height: 150px;   /* CHANGED: bigger photo (was 108px) */
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--rule);
