@@ -5,7 +5,7 @@
   --muted: #6B6862;
   --rule: #E6C6CE;    /* CHANGED: pink-tinted divider lines (was #DDD9CF) */
 }
- 
+
 * {
   box-sizing: border-box;
 }
@@ -98,6 +98,16 @@ body {
 
 .sidebar-footer a:hover {
   color: var(--accent);
+}
+
+/* CHANGED: headshot style moved here from inside the mobile section,
+   where a missing } stopped it working on desktop */
+.headshot {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
 }
 
 /* Main content */
@@ -194,6 +204,113 @@ body {
   font-size: 0.8rem;
 }
 
+/* NEW: News section with twinkling stars */
+
+.news-list {
+  list-style: none;
+  padding-left: 0 !important;
+  margin: 0;
+}
+
+.news-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 1rem !important;
+}
+
+.news-list li:last-child {
+  margin-bottom: 0 !important;
+}
+
+.news-date {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.news-star {
+  display: inline-block;
+  flex-shrink: 0;
+  animation: twinkle 2.4s ease-in-out infinite;
+}
+
+/* each star twinkles a little after the one above it */
+.news-list li:nth-child(2) .news-star { animation-delay: 0.8s; }
+.news-list li:nth-child(3) .news-star { animation-delay: 1.6s; }
+
+@keyframes twinkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50%      { transform: scale(1.25) rotate(18deg); opacity: 0.7; }
+}
+
+/* NEW: styles for the Research Projects section (everything down to
+   "Responsive" is new) */
+
+.project {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+}
+
+.project-summary {
+  margin-bottom: 1.5rem !important;
+}
+
+.pubs {
+  list-style: none;
+  padding-left: 0 !important;
+  margin: 0;
+}
+
+.pubs li {
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+  margin-bottom: 1.25rem !important;
+}
+
+.pubs li:last-child {
+  margin-bottom: 0 !important;
+}
+
+.pub-title {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.pub-authors,
+.pub-venue {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.pub-venue {
+  font-style: italic;
+}
+
+.pub-authors strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.pub-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 /* Responsive */
 
 @media (max-width: 800px) {
@@ -238,22 +355,17 @@ body {
   .content {
     padding: 2.5rem 1.5rem 3rem;
     max-width: 100%;
-
-  .headshot {
-  width: 108px;
-  height: 108px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--rule);
-}
-
-    
-  }
+  }   /* CHANGED: added this missing closing brace */
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  /* NEW: stars stay still for visitors who turn off animations */
+  .news-star {
+    animation: none;
   }
 }
 
