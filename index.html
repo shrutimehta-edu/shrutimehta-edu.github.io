@@ -15,12 +15,14 @@
 
   <header class="sidebar">
     <div class="sidebar-inner">
-      <<img src="shruti_headshot.png" alt="Shruti Mehta" class="headshot">
+      <!-- CHANGED: removed a stray "<" before this image tag -->
+      <img src="shruti_headshot.png" alt="Shruti Mehta" class="headshot">
       <h1 class="name">Shruti Mehta</h1>
       <p class="tagline">PhD Candidate, Learning Sciences and Technologies — University of Pennsylvania</p>
 
       <nav class="nav">
         <a href="#about">About</a>
+        <a href="#news">News</a>   <!-- NEW: News tab -->
         <a href="#education">Education</a>
         <a href="#research">Research &amp; Publications</a>
         <a href="#awards">Awards &amp; Funding</a>
@@ -28,10 +30,11 @@
         <a href="#contact">Contact</a>
       </nav>
 
+      <!-- CHANGED: LinkedIn and Google Scholar now link to real profiles (were "#") -->
       <div class="sidebar-footer">
         <a href="mailto:shrmeh@upenn.edu">shrmeh@upenn.edu</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/shruti-mehta-19466121a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=c59vxVcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="#">CV (PDF)</a>
       </div>
     </div>
@@ -53,6 +56,38 @@
     learn in K-12 and workforce settings.
     </p>
     </section>
+
+    <!-- NEW: News section with twinkling stars. To add news, copy one <li> block,
+         paste it at the top of the list, and edit the date and text. -->
+    <section id="news" class="section">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-star" aria-hidden="true">⭐</span>
+          <div>
+            <span class="news-date">Oct 2026</span>
+            Presenting at <a href="https://aclanthology.org/venues/aimecon/" target="_blank" rel="noopener">AIME-Con 2026</a>,
+            the NCME Artificial Intelligence in Measurement and Education Conference, in Pittsburgh.
+          </div>
+        </li>
+        <li>
+          <span class="news-star" aria-hidden="true">⭐</span>
+          <div>
+            <span class="news-date">2026</span>
+            Co-led a <a href="https://cetli.upenn.edu/" target="_blank" rel="noopener">CETLI</a> workshop at Penn GSE.
+          </div>
+        </li>
+        <li>
+          <span class="news-star" aria-hidden="true">⭐</span>
+          <div>
+            <span class="news-date">2026</span>
+            Presenting work in progress at Penn's
+            <a href="https://www.pop.upenn.edu/" target="_blank" rel="noopener">Population Studies Center</a>.
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!-- END of new News section -->
 
     <section id="education" class="section">
       <h2>Education</h2>
@@ -91,7 +126,7 @@
       </div>
     </section>
 
-      <section id="research" class="section">
+    <section id="research" class="section">
       <h2>Research Projects &amp; Publications</h2>
       <p class="project-summary">My research is organized around four projects: </p>
  
@@ -226,7 +261,8 @@
           <span class="entry-date">Summer 2026</span>
         </div>
         <p class="entry-org">University of Pennsylvania</p>
-        <p class="entry-detail">Supported an graduate course on adaptive and AI-driven learning systems.</p>
+        <!-- CHANGED: fixed typo "an graduate" to "a graduate" -->
+        <p class="entry-detail">Supported a graduate course on adaptive and AI-driven learning systems.</p>
       </div>
  
       <div class="entry">
@@ -311,11 +347,11 @@
       </ul>
     </section>
 
-
+    <!-- CHANGED: Certifications was left outside any section when Skills was
+         removed, which broke the page structure. It now has its own section. -->
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
       <div class="entry">
-        <div class="entry-header">
-          <h3>Certifications</h3>
-        </div>
         <p class="entry-detail">
           Central Teaching Eligibility Test (CTET), Government of India, 2018 ·
           Strategic Management, King's College London, 2017.
@@ -323,18 +359,20 @@
       </div>
     </section>
 
+    <!-- CHANGED: Google Scholar link below now points to your profile (was "#") -->
     <section id="contact" class="section">
       <h2>Contact</h2>
       <p>
         The best way to reach me is by <a href="mailto:shrmeh@upenn.edu">email</a>.
-        You can find my publications on <a href="#" target="_blank" rel="noopener">Google Scholar</a>
+        You can find my publications on <a href="https://scholar.google.com/citations?user=c59vxVcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         and connect on <a href="https://www.linkedin.com/in/shruti-mehta-19466121a/" target="_blank" rel="noopener">LinkedIn</a>.
         My CV is available <a href="#">here</a>.
       </p>
     </section>
 
     <footer class="page-footer">
-      <p>Last updated September 2026.</p>
+      <!-- CHANGED: updated date -->
+      <p>Last updated October 2026.</p>
     </footer>
 
   </main>
