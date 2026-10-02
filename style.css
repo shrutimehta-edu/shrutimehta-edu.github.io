@@ -1,11 +1,11 @@
 :root {
   --ink: #1B2430;
-  --paper: #FCF1F3;   /* CHANGED: light pink background (was #FAF9F5) */
+  --paper: #F8E1E6;   /* CHANGED: pink background (was #FAF9F5) */
   --accent: #5B7B7A;
   --muted: #6B6862;
-  --rule: #EBD5DA;    /* CHANGED: pink-tinted divider lines (was #DDD9CF) */
+  --rule: #E6C6CE;    /* CHANGED: pink-tinted divider lines (was #DDD9CF) */
 }
-
+ 
 * {
   box-sizing: border-box;
 }
